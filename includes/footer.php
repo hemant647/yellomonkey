@@ -1,13 +1,13 @@
-    </main>
+</main>
 
     <!-- Footer -->
     <footer class="bg-darker pt-16 pb-8 border-t border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 border-b border-white/10 pb-16">
                 <!-- Branding & Newsletter -->
                 <div class="col-span-1 md:col-span-2 lg:col-span-1">
                     <a href="/" class="block mb-6">
-                        <img class="h-8 w-auto" src="assets/images/Vector-120x15.webp" alt="YelloMonkey Labs">
+                        <img src="assets/images/Vector-120x15.webp" alt="YelloMonkey" class="h-5 md:h-6 object-contain">
                     </a>
                     <p class="text-muted text-sm mb-6 max-w-xs">
                         Expand your online reach with YelloMonkey Labs. Best digital marketing company in Houston.

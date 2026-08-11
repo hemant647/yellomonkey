@@ -48,8 +48,8 @@
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="/" class="block">
-                        <img class="h-8 w-auto" src="assets/images/Vector-120x15.webp" alt="YelloMonkey Labs">
+                    <a href="/" class="flex items-center gap-2 group">
+                        <img src="assets/images/Vector-120x15.webp" alt="YelloMonkey" class="h-5 md:h-6 object-contain">
                     </a>
                 </div>
                 

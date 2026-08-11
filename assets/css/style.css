@@ -1,4 +1,4 @@
-/* Custom CSS for YelloMonkey Labs */
+/* Custom CSS for YelloMonkey Labs - Premium Layout */
 
 /* Marquee Animation */
 @keyframes marquee {
@@ -12,11 +12,11 @@
 }
 
 .animate-marquee {
-    animation: marquee 25s linear infinite;
+    animation: marquee 30s linear infinite;
 }
 
 .animate-marquee2 {
-    animation: marquee2 25s linear infinite;
+    animation: marquee2 30s linear infinite;
 }
 
 /* Pause animation on hover */
@@ -25,12 +25,25 @@
     animation-play-state: paused;
 }
 
+/* Edge Mask Fade for Marquees and Carousels */
+.marquee-mask {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
 /* Glassmorphism Utilities */
 .glass-card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(10, 10, 10, 0.5);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+    background: rgba(20, 20, 20, 0.6);
+    border-color: rgba(255, 193, 7, 0.25);
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8), 0 0 50px -10px rgba(255, 193, 7, 0.05);
 }
 
 /* Blob Animation */
@@ -42,9 +55,91 @@
 }
 
 .animate-blob {
-    animation: blob 7s infinite;
+    animation: blob 10s infinite ease-in-out;
 }
 
 .animation-delay-2000 {
     animation-delay: 2s;
 }
+
+.animation-delay-4000 {
+    animation-delay: 4s;
+}
+
+/* Premium 3D perspective and Tilt Effect */
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+.tilt-3d {
+    transform: rotateY(-12deg) rotateX(8deg) rotateZ(1deg);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: -30px 30px 60px rgba(0, 0, 0, 0.7), 0 0 50px rgba(255, 193, 7, 0.03);
+}
+
+.tilt-3d:hover {
+    transform: rotateY(-4deg) rotateX(4deg) rotateZ(0deg) scale(1.03);
+    box-shadow: -15px 15px 40px rgba(0, 0, 0, 0.6), 0 0 70px rgba(255, 193, 7, 0.1);
+}
+
+/* Glow Border & Gradient Borders */
+.glow-border {
+    position: relative;
+    background: #0d0d0d;
+}
+
+.glow-border::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.3), transparent 60%);
+    z-index: -1;
+    opacity: 0.4;
+    transition: opacity 0.4s ease, background 0.4s ease;
+}
+
+.glow-border:hover::before {
+    opacity: 1;
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.6), rgba(255, 193, 7, 0.1) 40%, transparent);
+}
+
+/* Text Stroke effect for Large typography accents */
+.text-stroke {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.08);
+    color: transparent;
+    transition: -webkit-text-stroke 0.4s, color 0.4s;
+}
+
+.group:hover .text-stroke {
+    -webkit-text-stroke: 1px rgba(255, 193, 7, 0.4);
+}
+
+/* Subtle Grid overlay for gradients */
+.grid-overlay {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 32px 32px;
+}
+
+/* Global Subtle Grid backdrop for dark sections */
+.bg-grid {
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.007) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.007) 1px, transparent 1px);
+    background-size: 56px 56px;
+}
+
+/* Premium Hero background combining radial spotlight and grid */
+.hero-glow-bg {
+    background-color: #111111;
+    background-image: 
+        radial-gradient(circle at 50% 0%, rgba(255, 193, 7, 0.16), transparent 70%),
+        linear-gradient(rgba(255, 255, 255, 0.007) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.007) 1px, transparent 1px);
+    background-size: 100% 100%, 56px 56px, 56px 56px;
+}
+
+
+
