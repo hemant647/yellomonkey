@@ -1,0 +1,273 @@
+{
+    "images": [
+        {
+            "url": "https://yellomonkey.com/wp-content/uploads/2023/02/Vector-120x15.webp",
+            "local": "assets/images/Vector-120x15.webp"
+        },
+        {
+            "url": "https://yellomonkey.com/wp-content/uploads/2023/06/desktop-application-app-icon.webp",
+            "local": "assets/images/desktop-application-app-icon.webp"
+        },
+        {
+            "url": "https://yellomonkey.com/wp-content/uploads/2023/02/AppDev_black.d5aafd5e.svg.webp",
+            "local": "assets/images/AppDev_black.d5aafd5e.svg.webp"
+        },
+        {
+            "url": "https://yellomonkey.com/wp-content/uploads/2023/02/WebsiteDesign_Black.a4e5ae70.svg.webp",
+            "local": "assets/images/WebsiteDesign_Black.a4e5ae70.svg.webp"
+        },
+        {
+            "url": "https://yellomonkey.com/wp-content/uploads/2023/06/Vector-3.webp",
+            "local": "assets/images/Vector-3.webp"
+        },
+        {
+            "url": "https://yellomonkey.com/wp-content/uploads/2023/03/Vector-1.webp",
+            "local": "assets/images/Vector-1.webp"
+        },
+        {
+            "url": "https://yellomonkey.com/wp-content/uploads/2023/03/SMM_black.ad0ce79d.svg.webp",
+            "local": "assets/images/SMM_black.ad0ce79d.svg.webp"
+        },
+        {
+            "url": "https://yellomonkey.com/wp-content/uploads/2023/06/Vector-2.webp",
+            "local": "assets/images/Vector-2.webp"
+        },
+        {
+            "url": "https://yellomonkey.com/wp-content/uploads/2023/06/Vector-4.webp",
+            "local": "assets/images/Vector-4.webp"
+        },
+        {
+            "url": "https://yellomonkey.com/wp-content/uploads/2023/02/WebDev_Black.bb715f10.svg.webp",
+            "local": "assets/images/WebDev_Black.bb715f10.svg.webp"
+        },
+        {
+            "url": "https://yellomonkey.com/wp-content/uploads/2023/06/Group.webp",
+            "local": "assets/images/Group.webp"
+        },
+        {
+            "url": "https://yellomonkey.com/wp-content/uploads/2023/03/Content_black.38635f13.svg.webp",
+            "local": "assets/images/Content_black.38635f13.svg.webp"
+        },
+        {
+            "url": "https://yellomonkey.com/wp-content/uploads/2023/03/PPC_black.4383e0cf.svg.webp",
+            "local": "assets/images/PPC_black.4383e0cf.svg.webp"
+        }
+    ],
+    "sections": [
+        {
+            "id": 1,
+            "headings": [],
+            "paragraphs": []
+        },
+        {
+            "id": 2,
+            "headings": [],
+            "paragraphs": []
+        },
+        {
+            "id": 3,
+            "headings": [],
+            "paragraphs": []
+        },
+        {
+            "id": 4,
+            "headings": [],
+            "paragraphs": [
+                "Yellomonkey Labs is a creative digital marketing agency based in Houston, Texas. We help businesses experience phenomenal growth with our innovative and effective digital marketing strategies. We are a diverse, flexible team with a passion for digital marketing, comprised of creative and motivated professionals."
+            ]
+        },
+        {
+            "id": 5,
+            "headings": [
+                "Inspiring New Opportunities for Your Business"
+            ],
+            "paragraphs": [
+                "We are a diverse, flexible team with a passion for digital marketing, comprised of creative and motivated professionals. At Yellomonkey, we do not have hierarchical layers; instead, we focus on delivering a data-driven and individualized digital marketing service while attentively listening to the needs of our customers. We are transforming at the same rate as the world&#8217;s best companies to maximize customer satisfaction and profitability for our clients."
+            ]
+        },
+        {
+            "id": 6,
+            "headings": [
+                "Our Services",
+                "Our Services"
+            ],
+            "paragraphs": []
+        },
+        {
+            "id": 7,
+            "headings": [
+                "Website Development",
+                "Website Design",
+                "Custom Web Development",
+                "Know more",
+                "Know more",
+                "Know more"
+            ],
+            "paragraphs": [
+                "We code the backend of our websites with efficient code to load quick, have your site secured, and easy to navigate. You&#8217;ll always get an A or B grade with the metrics score, which will help you rank better on search engines.",
+                "Our process creates an interactive user experience, with each section carefully designed to engage with users to have them click on the page and product. By creating hundreds of websites, we&#8217;ve created a formula for success that brings in more traffic and engagement with lighting quick load speed.",
+                "We aid in the delivery of custom web development projects that support business processes and improve customer connections by analyzing the company\u2019s preferences, wants, and domain requirements in depth"
+            ]
+        },
+        {
+            "id": 8,
+            "headings": [
+                "Mobile App Development",
+                "PPC Marketing",
+                "Know more",
+                "Know more"
+            ],
+            "paragraphs": [
+                "With our team of Mobile app developers, we will be able to create your vision into reality. No matter how simple or intricate, our creative team will walk you through the process step by step and provide a proper MVP.",
+                "PPC campaigns are a powerful tool to jumpstart your business by bringing quick results to your business or brand. With our carefully curated campaigns, we test your ads every 72 hours to make sure the proper keywords, landing pages, and advertising slogans are there to bring maximum ROA on your campaign"
+            ]
+        },
+        {
+            "id": 9,
+            "headings": [
+                "Search Engine Optimization",
+                "Social Media Marketing",
+                "Search Engine Marketing",
+                "Know more",
+                "Know more",
+                "Know more"
+            ],
+            "paragraphs": [
+                "SEO is an integral part of any companies growth strategy and through highly researched keywords and only white hat approaches we make sure to provide the best results to rank you on Google from local to international",
+                "Working together with your creativity, we tailor make your social media campaigns that fit with your brand. Whether it&#8217;s Instagram, Facebook, google or TikTok we sit down and listen to your end goal and collaborate to create a custom plan that fits you and your business.",
+                "Search engine marketing, or SEM, is a type of digital marketing used to make a website visible on search engine results pages (SERPs). The term used to be used for both free and paid search activities, like\u00a0search engine optimization"
+            ]
+        },
+        {
+            "id": 10,
+            "headings": [
+                "PPC Marketing",
+                "E-Mail Marketing",
+                "Local SEO",
+                "Know more",
+                "Know more",
+                "Know more"
+            ],
+            "paragraphs": [
+                "PPC campaigns are a powerful tool to jumpstart your business by bringing quick results to your business or brand. With our carefully curated campaigns, we test your ads every 72 hours to make sure the proper keywords, landing pages, and advertising slogans are there to bring maximum ROA on your campaign",
+                "Working together with your creativity, we tailor make your social media campaigns that fit with your brand. Whether it&#8217;s Instagram, Facebook, google or TikTok we sit down and listen to your end goal and collaborate to create a custom plan that fits you and your business."
+            ]
+        },
+        {
+            "id": 11,
+            "headings": [
+                "Mobile App Development",
+                "iOS App Development",
+                "Android App Development",
+                "Know more",
+                "Know more",
+                "Know more"
+            ],
+            "paragraphs": [
+                "With our team of Mobile app developers, we will be able to create your vision into reality. No matter how simple or intricate, our creative team will walk you through the process step by step and provide a proper MVP.",
+                "iOS app development services go beyond the creation of standalone applications.\u00a0Yellomonkey Labs\u00a0 create apps that serve as third-party connectors for a wide range of applications, including healthcare, POS systems, and nearly anything else imaginable.",
+                "We do not confine our services to Smartphones. Our Android mobile app development portfolio is a testament to our proficiency across numerous Android devices and platforms."
+            ]
+        },
+        {
+            "id": 12,
+            "headings": [
+                "Content Marketing",
+                "E-Commerce Website",
+                "Custom Web Development",
+                "Know more",
+                "Know more",
+                "Know more"
+            ],
+            "paragraphs": [
+                "Content marketing optimization is essential in today\u2019s competitive digital landscape. With the abundance of content available online, companies need to stand out from the crowd by creating high-quality, relevant content that resonates with their target audience",
+                "Ecommerce website design and development services facilitate the creation of a superior ecommerce experience in order to attract today\u2019s demanding consumers.",
+                "We aid in the delivery of custom web development projects that support business processes and improve customer connections by analyzing the company\u2019s preferences, wants, and domain requirements in depth"
+            ]
+        },
+        {
+            "id": 13,
+            "headings": [
+                "Custom Website Design",
+                "Graphic &amp; Logo Design",
+                "Responsive-Website-Design",
+                "Know more",
+                "Know more",
+                "Know more"
+            ],
+            "paragraphs": [
+                "In the digital world, making a good first impression is necessary. A great web design is one way to get people to visit your site. People like websites that look good and are easy to use. Let our web design team help you make a website that works on all devices and makes a good impression.",
+                "Look around your office or home for a moment. How many logos do you see? And what do you think these logos mean? The design of your logo is one of the first steps in building your company&#8217;s identity, image, and brand. The design of a logo is also often the first thing a customer notices about your business.",
+                "Create a captivating online presence with our responsive website design services. Engage your audience across devices and boost your digital success."
+            ]
+        },
+        {
+            "id": 14,
+            "headings": [
+                "Why Choose Yellomonkey?",
+                "Sometimes, you just need a little push in the right direction: With our experience in digital marketing, we help businesses grow by generating targeted traffic."
+            ],
+            "paragraphs": []
+        },
+        {
+            "id": 15,
+            "headings": [],
+            "paragraphs": [
+                "Instead of trying to fit every business into a &#8220;one size fits all&#8221; product, we take the time to work with you to design a solution that fits like a glove.",
+                "You can get an honest and measurable return on your investment by using the best SEO, Web Design, Social Media, and Reputation Management services.",
+                "Through different internet marketing, design, and development channels, our project managers promote transparency.",
+                "We pay close attention to our client&#8217;s requests and deliver the agreed-upon space, time, and materials for the project.",
+                "Our team consists of highly qualified experts in many different areas of digital marketing and SEO domains. To provide world-class service and become a true business partner on every project."
+            ]
+        },
+        {
+            "id": 16,
+            "headings": [
+                "READY TO GROW YOUR BUSINESS?"
+            ],
+            "paragraphs": [
+                "Contact us to work with a results-driven digital marketing agency"
+            ]
+        },
+        {
+            "id": 17,
+            "headings": [
+                "READY TO GROW YOUR BUSINESS?"
+            ],
+            "paragraphs": [
+                "Contact us to work with a results-driven digital marketing agency"
+            ]
+        },
+        {
+            "id": 18,
+            "headings": [],
+            "paragraphs": []
+        },
+        {
+            "id": 19,
+            "headings": [
+                "Subscribe"
+            ],
+            "paragraphs": [
+                "YelloMonkey Labs is a leading website design, SEO, and marketing firm that drives digital presence and conversions."
+            ]
+        },
+        {
+            "id": 20,
+            "headings": [],
+            "paragraphs": []
+        },
+        {
+            "id": 21,
+            "headings": [],
+            "paragraphs": []
+        },
+        {
+            "id": 22,
+            "headings": [],
+            "paragraphs": [
+                "Sorry, this product is unavailable. Please choose a different combination."
+            ]
+        }
+    ]
+}
