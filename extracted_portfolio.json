@@ -1,0 +1,122 @@
+[
+    {
+        "bg_image": "",
+        "title": "Suki Violet",
+        "link": "https://sukiviolet.com/",
+        "hover_image": "https://yellomonkey.com/wp-content/uploads/2023/03/suki-violet.gif",
+        "bg_image_local": "assets/images/portfolio/a1.webp",
+        "hover_image_local": "assets/images/portfolio/suki-violet.gif"
+    },
+    {
+        "bg_image": "",
+        "title": "Arc Media",
+        "link": "https://arcmediagp.com/",
+        "hover_image": "https://yellomonkey.com/wp-content/uploads/2023/03/arcmedia.gif",
+        "bg_image_local": "assets/images/portfolio/a2.webp",
+        "hover_image_local": "assets/images/portfolio/arcmedia.gif"
+    },
+    {
+        "bg_image": "",
+        "title": "Snowycube",
+        "link": "https://snowycube.com/",
+        "hover_image": "https://yellomonkey.com/wp-content/uploads/2023/03/snowycube.webp",
+        "bg_image_local": "assets/images/portfolio/a3.webp",
+        "hover_image_local": "assets/images/portfolio/snowycube.webp"
+    },
+    {
+        "bg_image": "",
+        "title": "Spa World Houston",
+        "link": "https://spaworldhouston.com",
+        "hover_image": "https://yellomonkey.com/wp-content/uploads/2023/03/SpaworldHouston.gif",
+        "bg_image_local": "assets/images/portfolio/We-are-a-Korean-style-spa-and-sauna-with-the-goal-of-promoting-relaxation-and-overall-wellbeing.webp",
+        "hover_image_local": "assets/images/portfolio/SpaworldHouston.gif"
+    },
+    {
+        "bg_image": "",
+        "title": "Socal 3D Virtual",
+        "link": "https://socal3dvirtual.com/",
+        "hover_image": "https://yellomonkey.com/wp-content/uploads/2023/03/socal3d.gif",
+        "bg_image_local": "assets/images/portfolio/a5.webp",
+        "hover_image_local": "assets/images/portfolio/socal3d.gif"
+    },
+    {
+        "bg_image": "",
+        "title": "Hook Optics",
+        "link": "https://www.hooksunglasses.com/",
+        "hover_image": "https://yellomonkey.com/wp-content/uploads/2023/03/hook.gif",
+        "bg_image_local": "assets/images/portfolio/a6.webp",
+        "hover_image_local": "assets/images/portfolio/hook.gif"
+    },
+    {
+        "bg_image": "",
+        "title": "Cool Results",
+        "link": "https://cool-results.com/",
+        "hover_image": "https://yellomonkey.com/wp-content/uploads/2023/03/cool-results.gif",
+        "bg_image_local": "assets/images/portfolio/a7.webp",
+        "hover_image_local": "assets/images/portfolio/cool-results.gif"
+    },
+    {
+        "bg_image": "",
+        "title": "Crypto Martian",
+        "link": "http://cryptomartian.com",
+        "hover_image": "https://yellomonkey.com/wp-content/uploads/2023/03/crypto.gif",
+        "bg_image_local": "assets/images/portfolio/a8.webp",
+        "hover_image_local": "assets/images/portfolio/crypto.gif"
+    },
+    {
+        "bg_image": "",
+        "title": "Stepcare",
+        "link": "https://stepcare.co.in/",
+        "hover_image": "https://yellomonkey.com/wp-content/uploads/2023/03/stepcare.gif",
+        "bg_image_local": "assets/images/portfolio/a9.webp",
+        "hover_image_local": "assets/images/portfolio/stepcare.gif"
+    },
+    {
+        "bg_image": "",
+        "title": "Casa Privee",
+        "link": "https://casaprivee.com/",
+        "hover_image": "https://yellomonkey.com/wp-content/uploads/2023/03/casaa-privee.gif",
+        "bg_image_local": "assets/images/portfolio/a10.webp",
+        "hover_image_local": "assets/images/portfolio/casaa-privee.gif"
+    },
+    {
+        "bg_image": "",
+        "title": "McCall Floral",
+        "link": "https://mccallflorist.com/",
+        "hover_image": "https://yellomonkey.com/wp-content/uploads/2023/03/Mccallflorist.gif",
+        "bg_image_local": "assets/images/portfolio/a11.webp",
+        "hover_image_local": "assets/images/portfolio/Mccallflorist.gif"
+    },
+    {
+        "bg_image": "",
+        "title": "Asap Rehab",
+        "link": "https://asaphoustonchiro.com/",
+        "hover_image": "https://yellomonkey.com/wp-content/uploads/2023/03/ASAP.gif",
+        "bg_image_local": "assets/images/portfolio/a12.webp",
+        "hover_image_local": "assets/images/portfolio/ASAP.gif"
+    },
+    {
+        "bg_image": "",
+        "title": "Tulsa Shower",
+        "link": "https://tulsashowerdoors.com/",
+        "hover_image": "https://yellomonkey.com/wp-content/uploads/2023/03/shower-door-1024x554.gif",
+        "bg_image_local": "assets/images/portfolio/a13.webp",
+        "hover_image_local": "assets/images/portfolio/shower-door-1024x554.gif"
+    },
+    {
+        "bg_image": "",
+        "title": "Tyronology",
+        "link": "https://tyronology.com/",
+        "hover_image": "https://yellomonkey.com/wp-content/uploads/2023/03/typo.gif",
+        "bg_image_local": "assets/images/portfolio/a14.webp",
+        "hover_image_local": "assets/images/portfolio/typo.gif"
+    },
+    {
+        "bg_image": "",
+        "title": "CBconsulting",
+        "link": "https://cbconsulting.site/",
+        "hover_image": "https://yellomonkey.com/wp-content/uploads/2023/03/cb.gif",
+        "bg_image_local": "assets/images/portfolio/a15.webp",
+        "hover_image_local": "assets/images/portfolio/cb.gif"
+    }
+]

@@ -56,7 +56,7 @@
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex space-x-8">
                     <a href="services.php" class="text-sm font-medium text-light hover:text-primary transition-colors duration-200">Services</a>
-                    <a href="#" class="text-sm font-medium text-light hover:text-primary transition-colors duration-200">Our Work</a>
+                    <a href="work.php" class="text-sm font-medium text-light hover:text-primary transition-colors duration-200">Our Work</a>
                     <a href="#" class="text-sm font-medium text-light hover:text-primary transition-colors duration-200">Clients</a>
                     <a href="#" class="text-sm font-medium text-light hover:text-primary transition-colors duration-200">Testimonials</a>
                     <a href="#" class="text-sm font-medium text-light hover:text-primary transition-colors duration-200">FAQ</a>
