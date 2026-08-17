@@ -128,6 +128,11 @@ if (empty($current_page) || $current_page == 'index.php') $current_page = 'index
             </div>
         </div>
     </header>
+
+    <!-- Global Sticky Pay Now Button -->
+    <a href="/pay" class="fixed right-0 top-1/3 z-[100] bg-primary text-dark font-black text-sm uppercase tracking-widest py-6 px-2 rounded-l-lg hover:bg-yellow-400 transition-colors shadow-lg shadow-black/50 flex items-center justify-center border-l-2 border-y-2 border-primary" style="writing-mode: vertical-rl; transform: rotate(180deg);">
+        Pay Now
+    </a>
     
     <!-- Main Content Wrapper -->
     <main class="pt-20">

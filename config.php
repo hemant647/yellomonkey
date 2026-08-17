@@ -9,6 +9,10 @@ define('DB_NAME', 'yellomonkey_db');
 define('TITAN_SMTP_PASSWORD', ''); // Add your Hostinger Titan email password here
 define('SMTP_EMAIL_FROM', 'smtp@yellomonkey.com');
 define('ADMIN_NOTIFICATION_EMAIL', 'info@yellomonkey.com, albert@yellomonkey.com, hemant@yellomonkey.com'); // Addresses to receive notifications
+// Stripe Configuration (Test Mode for now)
+define('STRIPE_SECRET_KEY', 'sk_test_... (removed for github push)');
+define('STRIPE_PUBLISHABLE_KEY', 'pk_test_... (removed for github push)');
+define('STRIPE_WEBHOOK_SECRET', 'whsec_... (removed for github push)');
 
 // Global Security Headers
 header("X-Frame-Options: SAMEORIGIN");

@@ -54,6 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_type']) && $_POS
                         <li><a href="/testimonials" class="text-sm font-medium text-gray-400 hover:text-primary transition-colors">Testimonials</a></li>
                         <li><a href="/blogs" class="text-sm font-medium text-gray-400 hover:text-primary transition-colors">Blog</a></li>
                         <li><a href="/contact" class="text-sm font-medium text-gray-400 hover:text-primary transition-colors">Contact</a></li>
+                        <li class="pt-2"><a href="/pay" class="inline-block px-4 py-2 bg-primary text-dark font-bold text-xs uppercase tracking-wider rounded-md hover:bg-yellow-400 transition-colors">Pay Now</a></li>
                     </ul>
                 </div>
                 

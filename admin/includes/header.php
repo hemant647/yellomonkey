@@ -51,6 +51,9 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <a href="/admin/subscribers" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'subscribers.php' || $current_page == 'subscribers') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
                 Subscribers
             </a>
+            <a href="/admin/payments" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'payments.php' || $current_page == 'payments') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
+                Payments
+            </a>
             
             <a href="/admin/change_password" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'change_password.php' || $current_page == 'change_password') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
                 Change Password
