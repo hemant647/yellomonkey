@@ -57,10 +57,11 @@
                 <nav class="hidden md:flex space-x-8">
                     <a href="about.php" class="text-sm font-medium text-light hover:text-primary transition-colors duration-200">About Us</a>
                     <a href="services.php" class="text-sm font-medium text-light hover:text-primary transition-colors duration-200">Services</a>
+                    <a href="subscription.php" class="text-sm font-medium text-light hover:text-primary transition-colors duration-200">Subscription</a>
                     <a href="work.php" class="text-sm font-medium text-light hover:text-primary transition-colors duration-200">Our Work</a>
-                    <a href="#" class="text-sm font-medium text-light hover:text-primary transition-colors duration-200">Clients</a>
-                    <a href="#" class="text-sm font-medium text-light hover:text-primary transition-colors duration-200">Testimonials</a>
+                    <a href="testimonials.php" class="text-sm font-medium text-light hover:text-primary transition-colors duration-200">Testimonials</a>
                     <a href="#" class="text-sm font-medium text-light hover:text-primary transition-colors duration-200">FAQ</a>
+                    <a href="contact.php" class="text-sm font-medium text-primary border-b-2 border-primary pb-1 transition-colors duration-200">Contact Us</a>
                 </nav>
                 
                 <!-- CTA Button -->
