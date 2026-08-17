@@ -1,17 +1,23 @@
 <?php
 // Contact Us Page
 require_once 'config.php';
+session_start();
 
 $message = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_type']) && $_POST['form_type'] === 'contact') {
-    $name = trim($_POST['name'] ?? '');
-    $company = trim($_POST['company'] ?? '');
-    $email = trim($_POST['email'] ?? '');
-    $phone = trim($_POST['phone'] ?? '');
-    $services = isset($_POST['services']) && is_array($_POST['services']) ? implode(', ', $_POST['services']) : '';
+    // Validate CSRF
+    $csrf_token = $_POST['csrf_token'] ?? '';
+    if (!verify_csrf_token($csrf_token)) {
+        $message = "<div class='bg-red-500/20 text-red-400 p-4 rounded-lg mb-8 text-center border border-red-500/50 max-w-2xl mx-auto'>Invalid security token. Please try again.</div>";
+    } else {
+        $name = trim($_POST['name'] ?? '');
+        $company = trim($_POST['company'] ?? '');
+        $email = trim($_POST['email'] ?? '');
+        $phone = trim($_POST['phone'] ?? '');
+        $services = isset($_POST['services']) && is_array($_POST['services']) ? implode(', ', $_POST['services']) : '';
 
-    if ($name && $email) {
+        if ($name && $email) {
         try {
             $db = getDB();
             $stmt = $db->prepare("INSERT INTO contacts (name, company, email, phone, services_requested) VALUES (?, ?, ?, ?, ?)");
@@ -104,6 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_type']) && $_POS
     } else {
         $message = "<div class='bg-red-500/20 text-red-400 p-4 rounded-lg mb-8 text-center border border-red-500/50 max-w-2xl mx-auto'>Please fill in all required fields.</div>";
     }
+    } // End CSRF else block
 }
 
 include 'includes/header.php';
@@ -127,6 +134,7 @@ include 'includes/header.php';
         <div class="bg-[#1a1a1a] p-8 md:p-12 rounded-3xl border border-white/5 shadow-2xl">
             <form action="#" method="POST" class="space-y-8">
                 <input type="hidden" name="form_type" value="contact">
+                <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars(generate_csrf_token()); ?>">
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- Name -->

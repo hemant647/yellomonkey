@@ -15,8 +15,13 @@ $message = '';
 $db = getDB();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = trim($_POST['username'] ?? '');
-    $email = trim($_POST['email'] ?? '');
+    // Validate CSRF
+    $csrf_token = $_POST['csrf_token'] ?? '';
+    if (!verify_csrf_token($csrf_token)) {
+        $message = "<div class='bg-red-500/20 text-red-400 p-4 rounded mb-6 border border-red-500/50'>Invalid security token. Please try again.</div>";
+    } else {
+        $username = trim($_POST['username'] ?? '');
+        $email = trim($_POST['email'] ?? '');
     $password = $_POST['password'] ?? '';
     
     if ($username && $email && $password) {
@@ -41,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // Handle Delete Staff
-if (isset($_POST['delete_staff_id'])) {
+if (isset($_POST['delete_staff_id']) && verify_csrf_token($_POST['csrf_token'] ?? '')) {
     try {
         $stmt = $db->prepare("DELETE FROM users WHERE id = ? AND role = 'staff'");
         $stmt->execute([$_POST['delete_staff_id']]);
@@ -52,7 +57,7 @@ if (isset($_POST['delete_staff_id'])) {
 }
 
 // Handle Change Password
-if (isset($_POST['change_password_id']) && isset($_POST['new_password'])) {
+if (isset($_POST['change_password_id']) && isset($_POST['new_password']) && verify_csrf_token($_POST['csrf_token'] ?? '')) {
     $new_password = $_POST['new_password'];
     if (strlen($new_password) > 0) {
         try {
@@ -63,7 +68,8 @@ if (isset($_POST['change_password_id']) && isset($_POST['new_password'])) {
         } catch(PDOException $e) {
             $message = "<div class='bg-red-500/20 text-red-400 p-4 rounded mb-6 border border-red-500/50'>Error: " . $e->getMessage() . "</div>";
         }
-    }
+}
+    } // End CSRF else block
 }
 
 // Fetch current staff
@@ -83,6 +89,7 @@ $staffList = $db->query("SELECT id, username, email, role, created_at FROM users
         <div class="bg-card p-6 rounded-2xl border border-white/5 shadow-xl">
             <h3 class="text-white font-bold mb-6 border-b border-white/5 pb-2">Add New Staff</h3>
             <form method="POST" class="space-y-4">
+                <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars(generate_csrf_token()); ?>">
                 <div>
                     <label class="block text-sm font-bold text-gray-400 mb-2">Username</label>
                     <input type="text" name="username" required class="w-full bg-dark border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-primary transition-colors text-sm">
@@ -133,12 +140,14 @@ $staffList = $db->query("SELECT id, username, email, role, created_at FROM users
                                     Change Pass
                                 </button>
                                 <form id="pass_form_<?php echo $staff['id']; ?>" method="POST" style="display:none;">
+                                    <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars(generate_csrf_token()); ?>">
                                     <input type="hidden" name="change_password_id" value="<?php echo $staff['id']; ?>">
                                     <input type="hidden" name="new_password" id="pass_input_<?php echo $staff['id']; ?>" value="">
                                 </form>
                                 
                                 <!-- Delete -->
                                 <form method="POST" class="inline-block" onsubmit="return confirm('Are you sure you want to delete this staff member?');">
+                                    <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars(generate_csrf_token()); ?>">
                                     <input type="hidden" name="delete_staff_id" value="<?php echo $staff['id']; ?>">
                                     <button type="submit" class="text-red-400 hover:text-red-300 text-xs font-bold uppercase transition-colors">Delete</button>
                                 </form>

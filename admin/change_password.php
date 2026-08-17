@@ -13,9 +13,14 @@ $message = '';
 $db = getDB();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $current_password = $_POST['current_password'] ?? '';
-    $new_password = $_POST['new_password'] ?? '';
-    $confirm_password = $_POST['confirm_password'] ?? '';
+    // Validate CSRF
+    $csrf_token = $_POST['csrf_token'] ?? '';
+    if (!verify_csrf_token($csrf_token)) {
+        $message = "<div class='bg-red-500/20 text-red-400 p-4 rounded mb-6 border border-red-500/50'>Invalid security token. Please try again.</div>";
+    } else {
+        $current_password = $_POST['current_password'] ?? '';
+        $new_password = $_POST['new_password'] ?? '';
+        $confirm_password = $_POST['confirm_password'] ?? '';
     
     if ($current_password && $new_password && $confirm_password) {
         if ($new_password !== $confirm_password) {
@@ -42,7 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     } else {
         $message = "<div class='bg-red-500/20 text-red-400 p-4 rounded mb-6 border border-red-500/50'>All fields are required.</div>";
-    }
+        }
+    } // End CSRF else block
 }
 ?>
 
@@ -56,6 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="max-w-md">
     <div class="bg-card p-6 rounded-2xl border border-white/5 shadow-xl">
         <form method="POST" class="space-y-4">
+            <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars(generate_csrf_token()); ?>">
             <div>
                 <label class="block text-sm font-bold text-gray-400 mb-2">Current Password</label>
                 <input type="password" name="current_password" required class="w-full bg-dark border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-primary transition-colors text-sm">

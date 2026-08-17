@@ -11,7 +11,7 @@ $db = getDB();
 
 // Delete Blog Post
 $message = '';
-if (isset($_POST['delete_id'])) {
+if (isset($_POST['delete_id']) && verify_csrf_token($_POST['csrf_token'] ?? '')) {
     try {
         $stmt = $db->prepare("DELETE FROM posts WHERE id = ?");
         $stmt->execute([$_POST['delete_id']]);
@@ -77,6 +77,7 @@ $posts = $db->query("
                     <td class="px-6 py-4 text-right space-x-3">
                         <a href="blog_publish.php?id=<?php echo $post['id']; ?>" class="text-primary hover:text-yellow-300 text-xs font-bold uppercase transition-colors inline-block">Edit</a>
                         <form method="POST" class="inline-block" onsubmit="return confirm('Are you sure you want to delete this blog post? This action cannot be undone.');">
+                            <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars(generate_csrf_token()); ?>">
                             <input type="hidden" name="delete_id" value="<?php echo $post['id']; ?>">
                             <button type="submit" class="text-red-400 hover:text-red-300 text-xs font-bold uppercase transition-colors">Delete</button>
                         </form>

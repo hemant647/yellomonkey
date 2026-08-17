@@ -10,7 +10,7 @@ include 'includes/header.php';
 $db = getDB();
 
 // Delete subscriber
-if (isset($_POST['delete_id'])) {
+if (isset($_POST['delete_id']) && verify_csrf_token($_POST['csrf_token'] ?? '')) {
     $stmt = $db->prepare("DELETE FROM subscribers WHERE id = ?");
     $stmt->execute([$_POST['delete_id']]);
 }
@@ -40,6 +40,7 @@ $subscribers = $db->query("SELECT * FROM subscribers ORDER BY created_at DESC")-
                     <td class="px-6 py-4 text-sm font-bold text-white"><?php echo htmlspecialchars($sub['email']); ?></td>
                     <td class="px-6 py-4 text-sm">
                         <form method="POST" onsubmit="return confirm('Remove this subscriber?');">
+                            <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars(generate_csrf_token()); ?>">
                             <input type="hidden" name="delete_id" value="<?php echo $sub['id']; ?>">
                             <button type="submit" class="text-red-400 hover:text-red-300 text-xs font-bold uppercase">Remove</button>
                         </form>

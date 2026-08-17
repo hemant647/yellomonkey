@@ -39,31 +39,31 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <p class="text-xs text-gray-400 mt-1">Logged in as <?php echo htmlspecialchars($_SESSION['username']); ?></p>
         </div>
         <nav class="space-y-1">
-            <a href="index" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'index.php' || $current_page == 'index') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
+            <a href="/admin/index" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'index.php' || $current_page == 'index') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
                 Dashboard
             </a>
-            <a href="blogs" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'blogs.php' || $current_page == 'blogs' || $current_page == 'blog_publish.php' || $current_page == 'blog_publish') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
+            <a href="/admin/blogs" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'blogs.php' || $current_page == 'blogs' || $current_page == 'blog_publish.php' || $current_page == 'blog_publish') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
                 Manage Blogs
             </a>
-            <a href="entries" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'entries.php' || $current_page == 'entries') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
+            <a href="/admin/entries" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'entries.php' || $current_page == 'entries') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
                 Contact Entries
             </a>
-            <a href="subscribers" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'subscribers.php' || $current_page == 'subscribers') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
+            <a href="/admin/subscribers" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'subscribers.php' || $current_page == 'subscribers') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
                 Subscribers
             </a>
             
-            <a href="change_password" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'change_password.php' || $current_page == 'change_password') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
+            <a href="/admin/change_password" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'change_password.php' || $current_page == 'change_password') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
                 Change Password
             </a>
 
             <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'superadmin'): ?>
-            <a href="add_staff" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'add_staff.php' || $current_page == 'add_staff') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
+            <a href="/admin/add_staff" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'add_staff.php' || $current_page == 'add_staff') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
                 Staff Management
             </a>
             <?php endif; ?>
         </nav>
         <div class="p-4 border-t border-white/5">
-            <a href="logout.php" class="block w-full text-center px-4 py-2 border border-red-500/50 text-red-400 rounded-lg hover:bg-red-500 hover:text-white transition-colors">
+            <a href="/admin/logout.php" class="block w-full text-center px-4 py-2 border border-red-500/50 text-red-400 rounded-lg hover:bg-red-500 hover:text-white transition-colors">
                 Logout
             </a>
         </div>

@@ -10,7 +10,7 @@ include 'includes/header.php';
 $db = getDB();
 
 // Delete entry
-if (isset($_POST['delete_id'])) {
+if (isset($_POST['delete_id']) && verify_csrf_token($_POST['csrf_token'] ?? '')) {
     $stmt = $db->prepare("DELETE FROM contacts WHERE id = ?");
     $stmt->execute([$_POST['delete_id']]);
 }
@@ -52,6 +52,7 @@ $entries = $db->query("SELECT * FROM contacts ORDER BY created_at DESC")->fetchA
                     </td>
                     <td class="px-6 py-4 text-sm align-top">
                         <form method="POST" onsubmit="return confirm('Are you sure you want to delete this entry?');">
+                            <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars(generate_csrf_token()); ?>">
                             <input type="hidden" name="delete_id" value="<?php echo $entry['id']; ?>">
                             <button type="submit" class="text-red-400 hover:text-red-300 text-xs font-bold uppercase">Delete</button>
                         </form>

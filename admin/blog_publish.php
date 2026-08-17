@@ -23,7 +23,12 @@ if ($edit_id) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $title = trim($_POST['title'] ?? '');
+    // Validate CSRF
+    $csrf_token = $_POST['csrf_token'] ?? '';
+    if (!verify_csrf_token($csrf_token)) {
+        $message = "<div class='bg-red-500/20 text-red-400 p-4 rounded mb-6 border border-red-500/50'>Invalid security token. Please try again.</div>";
+    } else {
+        $title = trim($_POST['title'] ?? '');
     $content = trim($_POST['content'] ?? '');
     $meta_title = trim($_POST['meta_title'] ?? '');
     $meta_description = trim($_POST['meta_description'] ?? '');
@@ -79,6 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else if (!$message) {
         $message = "<div class='bg-red-500/20 text-red-400 p-4 rounded mb-6 border border-red-500/50'>Title and content are required.</div>";
     }
+    } // End CSRF else block
 }
 ?>
 
@@ -90,6 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <?php echo $message; ?>
 
 <form method="POST" enctype="multipart/form-data" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars(generate_csrf_token()); ?>">
     
     <!-- Main Content Column -->
     <div class="lg:col-span-2 space-y-6">

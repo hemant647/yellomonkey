@@ -1,6 +1,6 @@
 <?php
-session_start();
 require_once '../config.php';
+session_start();
 
 // If already logged in, redirect to dashboard
 if (isset($_SESSION['user_id'])) {
@@ -11,27 +11,35 @@ if (isset($_SESSION['user_id'])) {
 $error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = trim($_POST['username'] ?? '');
-    $password = $_POST['password'] ?? '';
-
-    if ($username && $password) {
-        $db = getDB();
-        $stmt = $db->prepare("SELECT id, username, password, role FROM users WHERE username = ?");
-        $stmt->execute([$username]);
-        $user = $stmt->fetch();
-
-        if ($user && password_verify($password, $user['password'])) {
-            // Login successful
-            $_SESSION['user_id'] = $user['id'];
-            $_SESSION['username'] = $user['username'];
-            $_SESSION['role'] = $user['role'];
-            header("Location: index.php");
-            exit;
-        } else {
-            $error = 'Invalid username or password.';
-        }
+    // Validate CSRF
+    $csrf_token = $_POST['csrf_token'] ?? '';
+    if (!verify_csrf_token($csrf_token)) {
+        $error = 'Invalid security token. Please try again.';
     } else {
-        $error = 'Please enter both username and password.';
+        $username = trim($_POST['username'] ?? '');
+        $password = $_POST['password'] ?? '';
+
+        if ($username && $password) {
+            $db = getDB();
+            $stmt = $db->prepare("SELECT id, username, password, role FROM users WHERE username = ?");
+            $stmt->execute([$username]);
+            $user = $stmt->fetch();
+
+            if ($user && password_verify($password, $user['password'])) {
+                // Login successful - prevent session fixation
+                session_regenerate_id(true);
+                
+                $_SESSION['user_id'] = $user['id'];
+                $_SESSION['username'] = $user['username'];
+                $_SESSION['role'] = $user['role'];
+                header("Location: index.php");
+                exit;
+            } else {
+                $error = 'Invalid username or password.';
+            }
+        } else {
+            $error = 'Please enter both username and password.';
+        }
     }
 }
 ?>
@@ -70,6 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php endif; ?>
 
         <form method="POST" class="space-y-6">
+            <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars(generate_csrf_token()); ?>">
             <div>
                 <label class="block text-sm font-bold text-gray-400 mb-2">Username</label>
                 <input type="text" name="username" class="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" required>

@@ -1,6 +1,6 @@
 <?php
-session_start();
 require_once '../config.php';
+session_start();
 
 // Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
@@ -12,13 +12,28 @@ if (!isset($_SESSION['user_id'])) {
 // Check if a file was uploaded
 if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
     
+    $tmp_name = $_FILES['file']['tmp_name'];
+    $original_name = $_FILES['file']['name'];
+    
     // Validate file type
     $allowedMimeTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
-    $fileMimeType = mime_content_type($_FILES['file']['tmp_name']);
+    $fileMimeType = mime_content_type($tmp_name);
     
-    if (!in_array($fileMimeType, $allowedMimeTypes)) {
+    // Validate file extension strictly
+    $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+    $fileExtension = strtolower(pathinfo($original_name, PATHINFO_EXTENSION));
+    
+    if (!in_array($fileMimeType, $allowedMimeTypes) || !in_array($fileExtension, $allowedExtensions)) {
         http_response_code(400);
         echo json_encode(['error' => 'Invalid file type. Only JPG, PNG, GIF, and WEBP are allowed.']);
+        exit;
+    }
+    
+    // Extra security: reject if file contains php tags
+    $content = file_get_contents($tmp_name);
+    if (strpos($content, '<?php') !== false || strpos($content, '<?=') !== false) {
+        http_response_code(400);
+        echo json_encode(['error' => 'Malicious content detected.']);
         exit;
     }
 
