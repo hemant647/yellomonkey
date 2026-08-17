@@ -17,20 +17,85 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_type']) && $_POS
             $stmt = $db->prepare("INSERT INTO contacts (name, company, email, phone, services_requested) VALUES (?, ?, ?, ?, ?)");
             $stmt->execute([$name, $company, $email, $phone, $services]);
             
-            // Send email notification
+            // 1. Send HTML email notification to Admins
             $to = ADMIN_NOTIFICATION_EMAIL;
-            $subject = "New Contact Inquiry from $name";
-            $email_content = "You have received a new contact inquiry:\n\n";
-            $email_content .= "Name: $name\n";
-            $email_content .= "Company: $company\n";
-            $email_content .= "Email: $email\n";
-            $email_content .= "Phone: $phone\n";
-            $email_content .= "Services Requested: $services\n";
+            $subject = "New Project Inquiry from $name ($company)";
             
-            $headers = "From: " . SMTP_EMAIL_FROM . "\r\n";
-            $headers .= "Reply-To: $email\r\n";
+            $admin_html = "
+            <html>
+            <head>
+                <style>
+                    body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; line-height: 1.6; }
+                    .container { max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee; border-radius: 8px; background: #fafafa; }
+                    .header { background: #ffc107; color: #111; padding: 15px 20px; border-radius: 6px 6px 0 0; text-align: center; }
+                    .content { padding: 20px; background: #fff; border-radius: 0 0 6px 6px; }
+                    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+                    th, td { padding: 12px; border-bottom: 1px solid #eee; text-align: left; }
+                    th { color: #666; width: 120px; }
+                </style>
+            </head>
+            <body>
+                <div class='container'>
+                    <div class='header'>
+                        <h2 style='margin:0; font-size:20px; text-transform:uppercase;'>New Lead Received!</h2>
+                    </div>
+                    <div class='content'>
+                        <p><strong>$name</strong> has just submitted a new project inquiry through the website.</p>
+                        <table>
+                            <tr><th>Name</th><td>$name</td></tr>
+                            <tr><th>Company</th><td>$company</td></tr>
+                            <tr><th>Email</th><td><a href='mailto:$email'>$email</a></td></tr>
+                            <tr><th>Phone</th><td>$phone</td></tr>
+                            <tr><th>Services</th><td>$services</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </body>
+            </html>";
+
+            require_once 'includes/mailer.php';
             
-            mail($to, $subject, $email_content, $headers);
+            // Send to admins (sendMail handles comma-separated lists automatically)
+            sendMail($to, $subject, $admin_html, $email);
+
+            // 2. Send automated HTML Thank You email to User
+            $user_subject = "Thank you for reaching out to Yellomonkey!";
+            
+            $user_html = "
+            <html>
+            <head>
+                <style>
+                    body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #111; line-height: 1.6; }
+                    .container { max-width: 600px; margin: 0 auto; padding: 30px; border-radius: 12px; background: #1a1a1a; color: #f5f5f5; text-align: center; }
+                    .header { margin-bottom: 25px; }
+                    .btn { display: inline-block; padding: 12px 30px; background: #ffc107; color: #111; text-decoration: none; font-weight: bold; border-radius: 6px; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px; }
+                    .footer { margin-top: 40px; font-size: 12px; color: #888; }
+                </style>
+            </head>
+            <body style='background:#f4f4f5; padding:20px;'>
+                <div class='container'>
+                    <div class='header'>
+                        <h1 style='color:#ffc107; margin:0;'>YELLOMONKEY</h1>
+                    </div>
+                    <h2 style='font-size:24px; margin-top:0;'>Hello, $name!</h2>
+                    <p style='font-size:16px; color:#ccc; max-width:400px; margin: 0 auto;'>
+                        Thank you for reaching out to us. We have received your inquiry and our team is currently reviewing your details. 
+                        We typically respond within 24 hours.
+                    </p>
+                    <p style='font-size:16px; color:#ccc; margin-top: 15px;'>
+                        In the meantime, feel free to schedule a direct meeting with us!
+                    </p>
+                    <a href='https://calendly.com/995/usa-30-min-meet?month=2026-08' class='btn'>Book a Call Now</a>
+                    
+                    <div class='footer'>
+                        &copy; " . date('Y') . " Yellomonkey Labs. All rights reserved.
+                    </div>
+                </div>
+            </body>
+            </html>";
+
+            // Send to user
+            sendMail($email, $user_subject, $user_html, 'info@yellomonkey.com');
             
             $message = "<div class='bg-green-500/20 text-green-400 p-4 rounded-lg mb-8 text-center border border-green-500/50 max-w-2xl mx-auto'>Thank you for your inquiry, $name! We'll get back to you shortly.</div>";
         } catch (PDOException $e) {

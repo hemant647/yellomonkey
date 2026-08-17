@@ -51,6 +51,11 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <a href="subscribers" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'subscribers.php' || $current_page == 'subscribers') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
                 Subscribers
             </a>
+            
+            <a href="change_password" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'change_password.php' || $current_page == 'change_password') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
+                Change Password
+            </a>
+
             <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'superadmin'): ?>
             <a href="add_staff" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'add_staff.php' || $current_page == 'add_staff') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
                 Staff Management

@@ -6,8 +6,9 @@ define('DB_PASS', '');
 define('DB_NAME', 'yellomonkey_db');
 
 // SMTP Settings (for email notifications)
-define('SMTP_EMAIL_FROM', 'smtp@yellomon.com');
-define('ADMIN_NOTIFICATION_EMAIL', 'hello@yellomonkey.com'); // Address to receive notifications
+define('TITAN_SMTP_PASSWORD', ''); // Add your Hostinger Titan email password here
+define('SMTP_EMAIL_FROM', 'smtp@yellomonkey.com');
+define('ADMIN_NOTIFICATION_EMAIL', 'info@yellomonkey.com, albert@yellomonkey.com, hemant@yellomonkey.com'); // Addresses to receive notifications
 
 // Function to get a PDO database connection
 function getDB() {

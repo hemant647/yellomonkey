@@ -612,7 +612,7 @@
         
         <!-- Logo centered below CTA box -->
         <div class="mt-16 text-center">
-            <img src="assets/images/Vector-120x15.webp" alt="YelloMonkey Logo" class="h-5 mx-auto object-contain filter brightness-0 opacity-40">
+            <img src="assets/images/Vector-120x15.webp" alt="YelloMonkey Logo" class="h-5 mx-auto object-contain filter brightness-0 invert opacity-40">
         </div>
     </div>
 </section>

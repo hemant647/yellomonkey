@@ -30,7 +30,7 @@ include 'includes/header.php';
             </div>
             <div class="relative hidden lg:block">
                 <div class="absolute -inset-4 bg-primary/20 rounded-[40px] transform rotate-3 scale-105"></div>
-                <img src="assets/images/subscription/Asset-5-711x1024.png.webp" alt="Design on Subscription" class="relative w-full max-w-md mx-auto h-auto rounded-[30px] shadow-2xl border-4 border-white object-cover" onerror="this.src='https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'">
+                <img src="assets/images/cover-.webp" alt="Design on Subscription" class="relative w-full h-[600px] mx-auto rounded-[30px] shadow-2xl border-4 border-white object-cover" onerror="this.src='https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'">
             </div>
         </div>
     </div>
