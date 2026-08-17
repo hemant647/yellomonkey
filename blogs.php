@@ -36,7 +36,7 @@ $posts = $db->query("
         <?php else: ?>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <?php foreach($posts as $post): ?>
-                    <a href="blog_single.php?slug=<?php echo urlencode($post['slug']); ?>" class="group block">
+                    <a href="/blogs/<?php echo urlencode($post['slug']); ?>" class="group block">
                         <div class="bg-card rounded-3xl overflow-hidden border border-white/5 shadow-xl transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-[0_20px_40px_-15px_rgba(255,193,7,0.15)] flex flex-col h-full">
                             <!-- Image -->
                             <div class="relative h-64 overflow-hidden bg-darker">

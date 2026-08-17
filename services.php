@@ -26,7 +26,7 @@
                     We are a diverse, flexible team with a passion for digital marketing, comprised of creative and motivated professionals. At Yellomonkey, we do not have hierarchical layers; instead, we focus on delivering a data-driven and individualized digital marketing service while attentively listening to the needs of our customers. We are transforming at the same rate as the world's best companies to maximize customer satisfaction and profitability for our clients.
                 </p>
 
-                <a href="#" class="inline-flex items-center justify-center px-10 py-5 bg-dark text-white font-bold text-lg rounded-xl hover:bg-black hover:shadow-2xl hover:shadow-dark/30 transition-all duration-300 transform hover:-translate-y-1 group">
+                <a href="https://calendly.com/995/usa-30-min-meet?month=2026-08" target="_blank" class="inline-flex items-center justify-center px-10 py-5 bg-dark text-white font-bold text-lg rounded-xl hover:bg-black hover:shadow-2xl hover:shadow-dark/30 transition-all duration-300 transform hover:-translate-y-1 group">
                     <span class="mr-3">Let's Talk</span>
                     <span class="w-10 h-10 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform">
                         <svg class="w-5 h-5 text-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -103,7 +103,7 @@
                     <?php echo $service['desc']; ?>
                 </p>
                 
-                <a href="#" class="inline-flex items-center text-dark font-bold text-sm uppercase tracking-wider group-hover:text-primary transition-colors mt-auto">
+                <a href="/services" class="inline-flex items-center text-dark font-bold text-sm uppercase tracking-wider group-hover:text-primary transition-colors mt-auto">
                     Know more
                     <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -196,10 +196,10 @@
                 Contact us to work with a results-driven digital marketing agency
             </p>
             <div class="flex flex-row flex-wrap gap-4">
-                <a href="#" class="inline-flex items-center justify-center px-8 py-3.5 bg-black text-primary font-bold rounded-lg hover:bg-gray-900 transition-colors tracking-wide text-sm shadow-md">
+                <a href="/client-form" class="inline-flex items-center justify-center px-8 py-3.5 bg-black text-primary font-bold rounded-lg hover:bg-gray-900 transition-colors tracking-wide text-sm shadow-md">
                     Get The Proposal
                 </a>
-                <a href="#" class="inline-flex items-center justify-center px-8 py-3.5 bg-black text-primary font-bold rounded-lg hover:bg-gray-900 transition-colors tracking-wide text-sm shadow-md">
+                <a href="https://calendly.com/995/usa-30-min-meet?month=2026-08" target="_blank" class="inline-flex items-center justify-center px-8 py-3.5 bg-black text-primary font-bold rounded-lg hover:bg-gray-900 transition-colors tracking-wide text-sm shadow-md">
                     Call Now
                 </a>
             </div>

@@ -50,7 +50,7 @@ include 'includes/header.php';
     <?php if ($post['featured_image']): ?>
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
         <div class="rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative aspect-video">
-            <img src="<?php echo htmlspecialchars($post['featured_image']); ?>" alt="<?php echo htmlspecialchars($post['title']); ?>" class="w-full h-full object-cover">
+            <img src="/<?php echo ltrim($post['featured_image'], '/'); ?>" alt="<?php echo htmlspecialchars($post['title']); ?>" class="w-full h-full object-cover">
         </div>
     </div>
     <?php endif; ?>
@@ -72,7 +72,7 @@ include 'includes/header.php';
 
 <!-- Read More / Return -->
 <section class="py-12 bg-darker border-t border-white/5 text-center">
-    <a href="blogs.php" class="inline-flex items-center px-8 py-4 bg-primary text-dark font-bold rounded-lg hover:bg-yellow-400 transition-colors uppercase tracking-wider">
+    <a href="/blogs" class="inline-flex items-center px-8 py-4 bg-primary text-dark font-bold rounded-lg hover:bg-yellow-400 transition-colors uppercase tracking-wider">
         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
         Back to All Blogs
     </a>

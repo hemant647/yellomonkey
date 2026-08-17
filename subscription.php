@@ -106,7 +106,7 @@ include 'includes/header.php';
                         <span class="text-dark/80 font-medium">Unlimited users</span>
                     </li>
                 </ul>
-                <a href="#" class="block w-full py-4 bg-dark text-white text-center font-bold rounded-lg hover:bg-gray-800 transition-colors uppercase tracking-wide">
+                <a href="/contact" class="block w-full py-4 bg-dark text-white text-center font-bold rounded-lg hover:bg-gray-800 transition-colors uppercase tracking-wide">
                     Subscribe Now
                 </a>
             </div>
@@ -142,7 +142,7 @@ include 'includes/header.php';
                         <span class="text-light/90 font-medium flex items-center">Priority support <span class="ml-2 bg-primary/20 text-primary text-xs px-2 py-0.5 rounded uppercase">Pro</span></span>
                     </li>
                 </ul>
-                <a href="#" class="block w-full py-4 bg-primary text-dark text-center font-bold rounded-lg hover:bg-primary/90 transition-colors uppercase tracking-wide">
+                <a href="/contact" class="block w-full py-4 bg-primary text-dark text-center font-bold rounded-lg hover:bg-primary/90 transition-colors uppercase tracking-wide">
                     Subscribe Now
                 </a>
             </div>
@@ -197,7 +197,7 @@ include 'includes/header.php';
                 Explore design possibilities with Yellow Monkey Labs. No pressure, just results.
             </p>
             <div class="flex flex-row flex-wrap justify-center md:justify-start gap-4">
-                <a href="#" class="inline-flex items-center justify-center px-8 py-3.5 bg-black text-primary font-bold rounded-lg hover:bg-gray-900 transition-colors tracking-wide text-sm shadow-md">
+                <a href="https://calendly.com/995/usa-30-min-meet?month=2026-08" target="_blank" class="inline-flex items-center justify-center px-8 py-3.5 bg-black text-primary font-bold rounded-lg hover:bg-gray-900 transition-colors tracking-wide text-sm shadow-md">
                     Book a Meeting
                 </a>
             </div>

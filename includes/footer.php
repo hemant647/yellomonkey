@@ -46,23 +46,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_type']) && $_POS
                 
                 <!-- Quick Links -->
                 <div>
-                    <h4 class="text-light font-bold mb-6 font-heading text-xl tracking-wider">Services</h4>
+                    <h4 class="text-light font-bold mb-6 font-heading text-xl tracking-wider">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-muted hover:text-primary text-sm transition-colors duration-200">Website Development</a></li>
-                        <li><a href="#" class="text-muted hover:text-primary text-sm transition-colors duration-200">Mobile App Development</a></li>
-                        <li><a href="#" class="text-muted hover:text-primary text-sm transition-colors duration-200">Social Media Marketing</a></li>
-                        <li><a href="#" class="text-muted hover:text-primary text-sm transition-colors duration-200">Search Engine Marketing</a></li>
-                        <li><a href="#" class="text-muted hover:text-primary text-sm transition-colors duration-200">Pay Per Click</a></li>
+                        <li><a href="/about" class="text-sm font-medium text-gray-400 hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="/services" class="text-sm font-medium text-gray-400 hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="/work" class="text-sm font-medium text-gray-400 hover:text-primary transition-colors">Our Work</a></li>
+                        <li><a href="/testimonials" class="text-sm font-medium text-gray-400 hover:text-primary transition-colors">Testimonials</a></li>
+                        <li><a href="/blogs" class="text-sm font-medium text-gray-400 hover:text-primary transition-colors">Blog</a></li>
+                        <li><a href="/contact" class="text-sm font-medium text-gray-400 hover:text-primary transition-colors">Contact</a></li>
                     </ul>
                 </div>
                 
-                <!-- Useful Links -->
+                <!-- Services -->
                 <div>
-                    <h4 class="text-light font-bold mb-6 font-heading text-xl tracking-wider">Useful Links</h4>
+                    <h4 class="text-light font-bold mb-6 font-heading text-xl tracking-wider">Services</h4>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-muted hover:text-primary text-sm transition-colors duration-200">About Us</a></li>
-                        <li><a href="#" class="text-muted hover:text-primary text-sm transition-colors duration-200">Our Work</a></li>
-                        <li><a href="#" class="text-muted hover:text-primary text-sm transition-colors duration-200">Contact Us</a></li>
+                        <li><a href="/subscription" class="text-sm font-medium text-gray-400 hover:text-primary transition-colors">Subscription Plans</a></li>
+                        <li><a href="/services#design" class="text-sm font-medium text-gray-400 hover:text-primary transition-colors">UI/UX Design</a></li>
+                        <li><a href="/services#development" class="text-sm font-medium text-gray-400 hover:text-primary transition-colors">Web Development</a></li>
+                        <li><a href="/services#seo" class="text-sm font-medium text-gray-400 hover:text-primary transition-colors">SEO Optimization</a></li>
+                        <li><a href="/services#marketing" class="text-sm font-medium text-gray-400 hover:text-primary transition-colors">Digital Marketing</a></li>
                     </ul>
                 </div>
                 

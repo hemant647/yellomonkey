@@ -121,10 +121,10 @@ include 'includes/header.php';
                 Contact us to work with a results-driven digital marketing agency
             </p>
             <div class="flex flex-row flex-wrap gap-4">
-                <a href="#" class="inline-flex items-center justify-center px-8 py-3.5 bg-black text-primary font-bold rounded-lg hover:bg-gray-900 transition-colors tracking-wide text-sm shadow-md">
+                <a href="/client-form" class="inline-flex items-center justify-center px-8 py-3.5 bg-black text-primary font-bold rounded-lg hover:bg-gray-900 transition-colors tracking-wide text-sm shadow-md">
                     Get The Proposal
                 </a>
-                <a href="#" class="inline-flex items-center justify-center px-8 py-3.5 bg-black text-primary font-bold rounded-lg hover:bg-gray-900 transition-colors tracking-wide text-sm shadow-md">
+                <a href="https://calendly.com/995/usa-30-min-meet?month=2026-08" target="_blank" class="inline-flex items-center justify-center px-8 py-3.5 bg-black text-primary font-bold rounded-lg hover:bg-gray-900 transition-colors tracking-wide text-sm shadow-md">
                     Call Now
                 </a>
             </div>

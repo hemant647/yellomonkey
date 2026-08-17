@@ -33,10 +33,10 @@
                 </p>
                 
                 <div class="flex flex-wrap gap-4">
-                    <a href="#" class="inline-flex items-center justify-center px-8 py-4 bg-dark text-white font-bold text-sm rounded-lg hover:bg-black hover:shadow-2xl hover:shadow-dark/30 transition-all duration-300 transform hover:-translate-y-1 uppercase tracking-wider">
+                    <a href="/client-form" class="inline-flex items-center justify-center px-8 py-4 bg-dark text-white font-bold text-sm rounded-lg hover:bg-black hover:shadow-2xl hover:shadow-dark/30 transition-all duration-300 transform hover:-translate-y-1 uppercase tracking-wider">
                         Get Started
                     </a>
-                    <a href="#" class="inline-flex items-center justify-center px-8 py-4 border border-dark/20 bg-dark/5 text-dark hover:bg-dark/10 font-bold text-sm rounded-lg transition-all duration-300 transform hover:-translate-y-1 uppercase tracking-wider">
+                    <a href="/services" class="inline-flex items-center justify-center px-8 py-4 border border-dark/20 bg-dark/5 text-dark hover:bg-dark/10 font-bold text-sm rounded-lg transition-all duration-300 transform hover:-translate-y-1 uppercase tracking-wider">
                         Our Portfolio
                     </a>
                 </div>
@@ -134,7 +134,7 @@
                 <p class="text-dark/70 font-medium leading-relaxed mb-8">
                     We deliver complete end-to-end design, custom development, and full-funnel digital strategy to build strong, conversion-optimized brands.
                 </p>
-                <a href="#" class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all uppercase tracking-wider text-sm">
+                <a href="/about" class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all uppercase tracking-wider text-sm">
                     See All Services
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                 </a>
@@ -323,7 +323,7 @@
                 <span class="text-sm font-bold text-primary uppercase tracking-widest block mb-3">Portfolio</span>
                 <h2 class="font-heading text-5xl md:text-6xl text-light">Featured Projects</h2>
             </div>
-            <a href="#" class="text-primary font-bold text-sm hover:underline uppercase tracking-wider mt-4 md:mt-0">
+            <a href="/services" class="text-primary font-bold text-sm hover:underline uppercase tracking-wider mt-4 md:mt-0">
                 View All Work
             </a>
         </div>
@@ -401,7 +401,7 @@
                         Map out traffic acquisition strategies, PPC channel improvements, and organic search funnels with our strategy squad.
                     </p>
                 </div>
-                <a href="#" class="inline-flex items-center justify-center w-full py-3 bg-primary text-dark font-bold text-sm rounded-lg hover:bg-yellow-400 hover:shadow-[0_0_20px_rgba(255,193,7,0.3)] transition-all uppercase tracking-wider">
+                <a href="https://calendly.com/995/usa-30-min-meet?month=2026-08" target="_blank" class="inline-flex items-center justify-center w-full py-3 bg-primary text-dark font-bold text-sm rounded-lg hover:bg-yellow-400 hover:shadow-[0_0_20px_rgba(255,193,7,0.3)] transition-all uppercase tracking-wider">
                     Book Now
                 </a>
             </div>
@@ -417,7 +417,7 @@
                         Discuss responsive visual architectures, design systems, and user flows designed to convert cold visitors into warm leads.
                     </p>
                 </div>
-                <a href="#" class="inline-flex items-center justify-center w-full py-3 bg-primary text-dark font-bold text-sm rounded-lg hover:bg-yellow-400 hover:shadow-[0_0_20px_rgba(255,193,7,0.3)] transition-all uppercase tracking-wider">
+                <a href="https://calendly.com/995/usa-30-min-meet?month=2026-08" target="_blank" class="inline-flex items-center justify-center w-full py-3 bg-primary text-dark font-bold text-sm rounded-lg hover:bg-yellow-400 hover:shadow-[0_0_20px_rgba(255,193,7,0.3)] transition-all uppercase tracking-wider">
                     Book Now
                 </a>
             </div>
@@ -433,7 +433,7 @@
                         Perfect for tailored operations, e-commerce integrations, custom software challenges, and unique development targets.
                     </p>
                 </div>
-                <a href="#" class="inline-flex items-center justify-center w-full py-3 bg-primary text-dark font-bold text-sm rounded-lg hover:bg-yellow-400 hover:shadow-[0_0_20px_rgba(255,193,7,0.3)] transition-all uppercase tracking-wider">
+                <a href="https://calendly.com/995/usa-30-min-meet?month=2026-08" target="_blank" class="inline-flex items-center justify-center w-full py-3 bg-primary text-dark font-bold text-sm rounded-lg hover:bg-yellow-400 hover:shadow-[0_0_20px_rgba(255,193,7,0.3)] transition-all uppercase tracking-wider">
                     Book Now
                 </a>
             </div>
@@ -456,7 +456,7 @@
                 <p class="text-dark/70 font-medium leading-relaxed mb-8">
                     Can't find the answers you're looking for? Reach out to our dedicated support team, and we will get back to you shortly.
                 </p>
-                <a href="#" class="inline-flex items-center justify-center px-6 py-3 bg-dark border border-dark hover:bg-black text-white font-bold text-sm rounded-lg transition-all uppercase tracking-wider">
+                <a href="/work" class="inline-flex items-center justify-center px-6 py-3 bg-dark border border-dark hover:bg-black text-white font-bold text-sm rounded-lg transition-all uppercase tracking-wider">
                     Contact Support
                 </a>
             </div>
@@ -579,7 +579,7 @@
                 <p class="text-dark/80 text-lg mb-8 font-medium">
                     Get top-tier design work delivered consistently with a dedicated squad acting as your extended team.
                 </p>
-                <a href="#" class="inline-flex items-center justify-center px-8 py-4 bg-dark text-white font-bold rounded-lg hover:bg-gray-900 transition-colors uppercase tracking-wider text-sm">
+                <a href="/blogs" class="inline-flex items-center justify-center px-8 py-4 bg-dark text-white font-bold rounded-lg hover:bg-gray-900 transition-colors uppercase tracking-wider text-sm">
                     Learn More
                 </a>
             </div>
@@ -601,10 +601,10 @@
                 <p class="text-muted text-lg max-w-xl font-medium">Partner with the best in the industry and watch your metrics soar.</p>
             </div>
             <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto shrink-0">
-                <a href="#" class="inline-flex items-center justify-center px-8 py-4 bg-primary text-dark font-bold rounded-lg hover:bg-yellow-400 hover:shadow-[0_0_20px_rgba(255,193,7,0.3)] transition-all uppercase tracking-wider text-sm text-center">
+                <a href="/client-form" class="inline-flex items-center justify-center px-8 py-4 bg-primary text-dark font-bold rounded-lg hover:bg-yellow-400 hover:shadow-[0_0_20px_rgba(255,193,7,0.3)] transition-all uppercase tracking-wider text-sm text-center">
                     Start Project
                 </a>
-                <a href="#" class="inline-flex items-center justify-center px-8 py-4 border border-white/10 bg-white/5 text-light font-bold rounded-lg hover:bg-white/10 transition-all uppercase tracking-wider text-sm text-center">
+                <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 border border-white/10 bg-white/5 text-light font-bold rounded-lg hover:bg-white/10 transition-all uppercase tracking-wider text-sm text-center">
                     Contact Us
                 </a>
             </div>

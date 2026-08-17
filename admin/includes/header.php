@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
+    header("Location: /admin/login");
     exit;
 }
 $current_page = basename($_SERVER['PHP_SELF']);
@@ -38,25 +38,23 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <h2 class="text-xl font-black text-white uppercase tracking-wider">YelloMonkey<span class="text-primary">Admin</span></h2>
             <p class="text-xs text-gray-400 mt-1">Logged in as <?php echo htmlspecialchars($_SESSION['username']); ?></p>
         </div>
-        <nav class="flex-1 p-4 space-y-2">
-            <a href="index.php" class="block px-4 py-3 rounded-lg transition-colors <?php echo $current_page == 'index.php' ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
+        <nav class="space-y-1">
+            <a href="index" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'index.php' || $current_page == 'index') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
                 Dashboard
             </a>
-            <a href="blogs.php" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'blogs.php' || $current_page == 'blog_publish.php') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
+            <a href="blogs" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'blogs.php' || $current_page == 'blogs' || $current_page == 'blog_publish.php' || $current_page == 'blog_publish') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
                 Manage Blogs
             </a>
-            <a href="entries.php" class="block px-4 py-3 rounded-lg transition-colors <?php echo $current_page == 'entries.php' ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
+            <a href="entries" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'entries.php' || $current_page == 'entries') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
                 Contact Entries
             </a>
-            <a href="subscribers.php" class="block px-4 py-3 rounded-lg transition-colors <?php echo $current_page == 'subscribers.php' ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
+            <a href="subscribers" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'subscribers.php' || $current_page == 'subscribers') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
                 Subscribers
             </a>
             <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'superadmin'): ?>
-            <div class="pt-4 mt-4 border-t border-white/5">
-                <a href="add_staff.php" class="block px-4 py-3 rounded-lg transition-colors <?php echo $current_page == 'add_staff.php' ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
-                    Add Staff Member
-                </a>
-            </div>
+            <a href="add_staff" class="block px-4 py-3 rounded-lg transition-colors <?php echo ($current_page == 'add_staff.php' || $current_page == 'add_staff') ? 'bg-primary text-dark font-bold' : 'text-gray-400 hover:bg-white/5 hover:text-white'; ?>">
+                Staff Management
+            </a>
             <?php endif; ?>
         </nav>
         <div class="p-4 border-t border-white/5">
