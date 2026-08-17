@@ -1,5 +1,45 @@
 <?php
 // Contact Us Page
+require_once 'config.php';
+
+$message = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_type']) && $_POST['form_type'] === 'contact') {
+    $name = trim($_POST['name'] ?? '');
+    $company = trim($_POST['company'] ?? '');
+    $email = trim($_POST['email'] ?? '');
+    $phone = trim($_POST['phone'] ?? '');
+    $services = isset($_POST['services']) && is_array($_POST['services']) ? implode(', ', $_POST['services']) : '';
+
+    if ($name && $email) {
+        try {
+            $db = getDB();
+            $stmt = $db->prepare("INSERT INTO contacts (name, company, email, phone, services_requested) VALUES (?, ?, ?, ?, ?)");
+            $stmt->execute([$name, $company, $email, $phone, $services]);
+            
+            // Send email notification
+            $to = ADMIN_NOTIFICATION_EMAIL;
+            $subject = "New Contact Inquiry from $name";
+            $email_content = "You have received a new contact inquiry:\n\n";
+            $email_content .= "Name: $name\n";
+            $email_content .= "Company: $company\n";
+            $email_content .= "Email: $email\n";
+            $email_content .= "Phone: $phone\n";
+            $email_content .= "Services Requested: $services\n";
+            
+            $headers = "From: " . SMTP_EMAIL_FROM . "\r\n";
+            $headers .= "Reply-To: $email\r\n";
+            
+            mail($to, $subject, $email_content, $headers);
+            
+            $message = "<div class='bg-green-500/20 text-green-400 p-4 rounded-lg mb-8 text-center border border-green-500/50 max-w-2xl mx-auto'>Thank you for your inquiry, $name! We'll get back to you shortly.</div>";
+        } catch (PDOException $e) {
+            $message = "<div class='bg-red-500/20 text-red-400 p-4 rounded-lg mb-8 text-center border border-red-500/50 max-w-2xl mx-auto'>An error occurred. Please try again later.</div>";
+        }
+    } else {
+        $message = "<div class='bg-red-500/20 text-red-400 p-4 rounded-lg mb-8 text-center border border-red-500/50 max-w-2xl mx-auto'>Please fill in all required fields.</div>";
+    }
+}
 
 include 'includes/header.php';
 ?>
@@ -8,11 +48,14 @@ include 'includes/header.php';
 <section class="min-h-screen py-24 bg-[#232323] relative flex items-center justify-center pt-32">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         
+        <?php echo $message; ?>
+
         <h1 class="text-center text-white text-2xl md:text-3xl font-bold font-heading mb-16 tracking-wide">
             Hello, Yellomonkey Team!,
         </h1>
 
         <form action="#" method="POST" class="space-y-12">
+            <input type="hidden" name="form_type" value="contact">
             
             <!-- Row 1: Name & Company -->
             <div class="flex flex-col md:flex-row md:items-end gap-6 md:gap-12">

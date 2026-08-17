@@ -1,5 +1,23 @@
 </main>
 
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_type']) && $_POST['form_type'] === 'newsletter') {
+    $sub_email = trim($_POST['email'] ?? '');
+    if (filter_var($sub_email, FILTER_VALIDATE_EMAIL)) {
+        try {
+            require_once __DIR__ . '/../config.php';
+            $db = getDB();
+            $stmt = $db->prepare("INSERT IGNORE INTO subscribers (email) VALUES (?)");
+            $stmt->execute([$sub_email]);
+            $sub_message = "Subscribed successfully!";
+        } catch (PDOException $e) {
+            $sub_message = "An error occurred.";
+        }
+    } else {
+        $sub_message = "Invalid email.";
+    }
+}
+?>
     <!-- Footer -->
     <footer class="bg-darker pt-16 pb-8 border-t border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,8 +32,12 @@
                     </p>
                     
                     <h4 class="text-light font-bold mb-4 font-heading text-xl tracking-wider">Subscribe</h4>
-                    <form class="flex flex-col sm:flex-row gap-2">
-                        <input type="email" placeholder="Your Email Address" class="w-full px-4 py-2 bg-card border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-light placeholder-muted text-sm transition-all duration-200">
+                    <?php if (isset($sub_message)): ?>
+                        <div class="text-primary text-sm font-bold mb-2"><?php echo htmlspecialchars($sub_message); ?></div>
+                    <?php endif; ?>
+                    <form method="POST" action="#footer" id="footer" class="flex flex-col sm:flex-row gap-2">
+                        <input type="hidden" name="form_type" value="newsletter">
+                        <input type="email" name="email" required placeholder="Your Email Address" class="w-full px-4 py-2 bg-card border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-light placeholder-muted text-sm transition-all duration-200">
                         <button type="submit" class="px-6 py-2 bg-primary text-dark font-bold rounded-md hover:bg-yellow-400 transition-colors duration-200 whitespace-nowrap text-sm cursor-pointer">
                             Subscribe
                         </button>
@@ -79,9 +101,26 @@
 
     <!-- Custom JS -->
     <script>
-        // Simple mobile menu toggle
-        const btn = document.querySelector('button[aria-expanded]');
-        // implementation goes here...
+        // Mobile menu toggle logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-toggle');
+            const menuContainer = document.getElementById('mobile-menu-container');
+            const iconOpen = document.getElementById('menu-icon-open');
+            const iconClose = document.getElementById('menu-icon-close');
+            
+            if(btn && menuContainer) {
+                btn.addEventListener('click', () => {
+                    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+                    btn.setAttribute('aria-expanded', !isExpanded);
+                    
+                    menuContainer.classList.toggle('hidden');
+                    iconOpen.classList.toggle('hidden');
+                    iconOpen.classList.toggle('block');
+                    iconClose.classList.toggle('hidden');
+                    iconClose.classList.toggle('block');
+                });
+            }
+        });
     </script>
 </body>
 </html>
